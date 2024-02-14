@@ -15,7 +15,12 @@ const App = () => {
   }
 
   function filterNumBicis(name) {
-    console.log(name)
+    const bicis = bicing;
+    if (name == 0) {
+      searchBicingFetch();
+    }
+    const bicisFiltradas = bicis.filter(e => e.free_bikes >= name);
+    setBicing(bicisFiltradas);
   }
 
   return (
